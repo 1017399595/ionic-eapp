@@ -17,7 +17,7 @@ a{text-decoration: none}
 #tabs .tab-item{color:#EF7E00}
 .topbg{
     background:linear-gradient(125deg, #1e755f, #145fa0, #b32486, #cd951a);
-    background-size: 800% 800%;
+    background-size: 100% 100%;
     -webkit-animation: AnimationName 11s ease infinite;
     -moz-animation: AnimationName 11s ease infinite;
     -o-animation: AnimationName 11s ease infinite;
