@@ -1,0 +1,68 @@
+{
+  "topbanner": [
+        {
+          "title": "韩式西葫芦煎饼",
+          "content": "韩剧里出镜率最高的一道小菜，也是韩国各节日饭桌上必须的一道小菜，别看它做法简单，口感确实会被惊艳到。面粉和鸡蛋锁住了西葫芦的水份……",
+          "imgsrcT": "images/home/top1_1_1.jpg",
+          "imgsrcB": "images/home/top1_1_2.jpg"
+        },
+        {
+          "title": "香菇卤肉包子",
+          "content": "超级香滴卤肉丁包子，有没有诱惑到你？蒸包子其实一点也不难，只要把面发好一切都不是问题。上班族朋友可以休息天的时候做点包子出来……",
+          "imgsrcT": "images/home/top1_1_2.jpg",
+          "imgsrcB": "images/home/top1_1_3.jpg"
+        },
+        {
+          "title": "凤尾虾球",
+          "content": "虾和土豆的营养价值众所皆知，它们富含高蛋白质、钾、镁、碘、磷等矿物质以外，还含有维生素A、C、B……特别适用于孕妇、产妇、婴儿、肥胖者和老年人等……",
+          "imgsrcT": "images/home/top1_1_3.jpg",
+          "imgsrcB": "images/home/top1_1_4.jpg"
+        },
+        {
+          "title": "黄金核桃仁玉米",
+          "content": "松仁玉米大家都不陌生，香甜的口感很是得到大家的喜欢，不过有的人就是不喜欢松仁的味道，所以喜欢吃这道甜品的朋友不妨换成核桃仁来试试……",
+          "imgsrcT": "images/home/top1_1_4.jpg",
+          "imgsrcB": "images/home/top1_1_1.jpg"
+        }
+  ],
+  "homejx": [
+        {
+          "imgsrc": "images/home/cont1.jpg",
+          "content": "好吃到爆的鸡米花～新手也会做",
+          "like": 1,
+          "comment": 1,
+          "done": 5
+        },
+        {
+          "imgsrc": "images/home/cont2.jpg",
+          "content": "和粉红女郎薛佳凝一起做蛋糕吧~",
+          "like": 1,
+          "comment": 1,
+          "done": 5
+        },
+        {
+          "imgsrc": "images/home/cont3.jpg",
+          "content": "谁都能学会的裱花款式——可可蛋糕",
+          "like": 5,
+          "comment": 8,
+          "done": 50
+        }
+  ],
+  "xiums":[
+        {
+          "tximg":"images/home/tx1.jpg",
+          "txname":"时光还是旧的好",
+          "date":"2016年8月5日",
+          "xmsimg":"images/home/xms1.jpg",
+          "xmstitle":"椰汁千层马蹄糕#我要上首页清爽家常菜#"
+        },
+      {
+        "tximg":"images/home/tx2.jpg",
+        "txname":"依然好心情",
+        "date":"2016年8月6日",
+        "xmsimg":"images/home/xms2.jpg",
+        "xmstitle":"最近流行的爆的一款五彩糯米蛋"
+      }
+
+  ]
+}

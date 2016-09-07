@@ -1,0 +1,14 @@
+<ion-view hide-nav-bar="true" id="tour-view">
+    <ion-slide-box on-slide-changed="onSlideChanged()">
+        <ion-slide>
+            <img src="images/tour/tour1.jpg">
+        </ion-slide>
+        <ion-slide>
+            <img src="images/tour/tour2.jpg">
+        </ion-slide>
+        <ion-slide id="tour3">
+            <img src="images/tour/tour3.jpg">
+            <a class="into" ui-sref="tabs.home" ng-if="isShow">进　入</a>
+        </ion-slide>
+    </ion-slide-box>
+</ion-view>

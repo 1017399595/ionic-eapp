@@ -1,0 +1,159 @@
+<ion-view>
+    <ion-nav-buttons>
+    <a class="icon ion-navicon" style="font-size:30px;color:#fff;padding-left:14px"></a>
+        <span class="span1">分类</span>
+    </ion-nav-buttons>
+    <ion-nav-title  class="item-input-inset" style="padding:6px;width:100%">
+        <label class="item-input-wrapper" style="background:rgba(255,255,255,0.5)">
+            <i class="icon ion-ios-search" style="color:#fff"></i>
+            <input type="search" placeholder="Search Me" class="percent100">
+        </label>
+    </ion-nav-title>
+
+        <ion-content style="background:#e5e5e5">
+            <div class="topbg">
+                <ion-slide-box auto-play="true" does-continue="true" slide-interval="4000" >
+                    <ion-slide ng-repeat="topbanner in topbanners">
+                        <div class="row">
+                            <div class="banner_img col col-33">
+                                <img class="featured-slide featured-slide-1" ng-src="{{topbanner.imgsrcT}}">
+                                <img class="featured-slide featured-slide-2" ng-src="{{topbanner.imgsrcB}}">
+                            </div>
+                            <div class="col col-offset-10" style="color:#fff">
+                                <h5 style="color:#fff">{{topbanner.title}}</h5>
+                                <a class="textp">{{topbanner.content}}</a>
+                            </div>
+                        </div>
+                    </ion-slide>
+                </ion-slide-box>
+            </div>
+            <div class="row text-center bgcolorw" >
+                <div class="col col-25">
+                    <img class="imgsize" src="images/1.png">
+                    <p class="font12px">美食视频</p>
+                </div>
+                <div class="col col-25">
+                    <img class="imgsize" src="images/2.png">
+                    <p class="font12px">美食菜单</p>
+                </div>
+                <div class="col col-25">
+                    <img class="imgsize" src="images/3.png">
+                    <p class="font12px">美食活动</p>
+                </div>
+                <div class="col col-25">
+                    <img class="imgsize" src="images/4.png">
+                    <p class="font12px">最新食谱</p>
+                </div>
+            </div>
+
+            <div class="row" style="background: #fff">
+                <i class="icon ion-social-twitter balanced"></i>
+                <span class="font12px">成都 周围都在看</span>
+            </div>
+            <div class="row text-center bgcolorw">
+                <div class="col col-33">
+                    <img src="images/home/round_1.jpg">
+                    <span class="font12px">珍珠丸子</span>
+                </div>
+                <div class="col col-33">
+                    <img src="images/home/round_2.jpg">
+                    <span class="font12px">红烧肉</span>
+                </div>
+                <div class="col col-33">
+                    <img src="images/home/round_3.jpg">
+                    <span class="font12px">香葱酥饼</span>
+                </div>
+            </div>
+            <div class="row">
+                <span ng-class="addClass(0)"><a  class="taba" on-touch="activeSlide(0)">精　选</a> </span>
+                <span ng-class="addClass(1)"><a  class="taba" on-touch="activeSlide(1)">秀美食</a> </span>
+            </div>
+            <ion-slide-box auto-play="false"  on-slide-changed="slideChanged(index)" active-slide="slideIndex" show-pager="false">
+                <ion-slide>
+                    <ion-slide-box auto-play="true"  does-continue="true">
+                        <ion-slide> <img src="images/home/huodong1.jpg"></ion-slide>
+                        <ion-slide> <img src="images/home/huodong2.jpg"></ion-slide>
+                        <ion-slide> <img src="images/home/huodong3.jpg"></ion-slide>
+                        <ion-slide> <img src="images/home/huodong4.jpg"></ion-slide>
+                    </ion-slide-box>
+                    <div class="list card">
+                        <div class="item item-body">
+                            <img class="full-image" src="images/home/cont1.jpg">
+                            <p>好吃到爆的鸡米花～新手也会做</p>
+                            <p>
+                                <a href="#" class="subdued">1 喜欢</a>
+                                <a href="#" class="subdued">5 评论</a>
+                                <a href="#" class="subdued">5 做过</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="list card ">
+                        <div class="item item-body">
+                            <img class="full-image" src="images/home/cont2.jpg">
+                            <p>和粉红女郎薛佳凝一起做蛋糕吧~ 混合着深蓝色的雪碧海、浅蓝色鸡尾酒浪花、拇指饼干沙滩，以及白巧克力贝壳的海洋，凉凉的蛋糕香醇又不失清爽，吃起来是什么味道呢～</p>
+                            <p>
+                                <a href="#" class="subdued">1 喜欢</a>
+                                <a href="#" class="subdued">5 评论</a>
+                                <a href="#" class="subdued">5 做过</a>
+                            </p>
+                        </div>
+                    </div>
+                </ion-slide>
+                <ion-slide>
+                    <div class="list card">
+                        <div class="item">
+                            <p>热门话题</p>
+                        </div>
+                        <div class="item item-body">
+                            <div class="item item-list-detail">
+                                <ion-scroll direction="x">
+                                    <ul class="ul">
+                                        <li class="huatiimg">
+                                            <img src="images/home/huati1.jpg" />
+                                            <span class="huatitext">夏日冰饮</span>
+                                        </li>
+                                        <li class="huatiimg">
+                                            <img src="images/home/huati2.jpg" />
+                                            <span class="huatitext">滋补养身</span>
+                                        </li>
+                                        <li class="huatiimg">
+                                            <img src="images/home/huati3.jpg"/>
+                                            <span class="huatitext">西式大餐</span>
+                                        </li>
+                                        <li class="huatiimg">
+                                            <img src="images/home/huati4.jpg"/>
+                                            <span class="huatitext">最爱小龙虾</span>
+                                        </li>
+                                        <li class="huatiimg">
+                                            <img src="images/home/huati5.jpg" />
+                                            <span class="huatitext">美味果茶</span>
+                                        </li>
+                                    </ul>
+                                </ion-scroll>
+                            </div>
+                        </div>
+                        <div class="item item-icon-left">
+                            <i class="icon ion-android-bus"></i>
+                            <span>24小时最热</span>
+                        </div>
+                    </div>
+                    <div class="list card">
+                        <div class="item">
+                            <p>精选话题</p>
+                        </div>
+                        <div class="item item-body">
+                            <img class="full-image" src="images/slider-1.jpg">
+                            <p>这个右是什么呢</p>
+                        </div>
+                        <div class="item item-icon-left">
+                            <i class="icon ion-android-bus"></i>
+                            <span>24小时最热</span>
+                        </div>
+                    </div>
+                </ion-slide>
+
+            </ion-slide-box>
+
+
+    </ion-content>
+</ion-view>

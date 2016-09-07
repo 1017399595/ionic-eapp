@@ -1,0 +1,177 @@
+<ion-view>
+    <ion-nav-buttons>
+    <a class="icon ion-navicon" menu-toggle="left" style="font-size:30px;color:#EF7E00;padding-left:10px"></a>
+    <a class="icon ion-ios-bell-outline naviconposition" style="font-size:30px;color:#EF7E00" ng-click="openModal()"></a>
+    </ion-nav-buttons>
+    <ion-nav-title>
+
+            <div class="item-input-inset" style="padding:6px;width:100%">
+        <label class="item-input-wrapper" style="border:1px #dddddd solid;background:#fff">
+            <i class="icon ion-ios-search"></i>
+            <input type="search" placeholder="Search Me" class="percent100">
+        </label>
+                </div>
+
+    </ion-nav-title>
+
+    <ion-content style="background:#e5e5e5">
+        <div class="topbg">
+            <ion-slide-box auto-play="true" does-continue="true" slide-interval="4000" >
+                <ion-slide ng-repeat="topbanner in topbanners">
+                    <div class="row">
+
+                        <div class="banner_img col col-33">
+                            <img class="featured-slide featured-slide-1" ng-src="{{topbanner.imgsrcT}}">
+                            <img class="featured-slide featured-slide-2" ng-src="{{topbanner.imgsrcB}}">
+                        </div>
+
+                        <div class="col col-offset-10" style="color:#fff">
+                            <h5 style="color:#fff">{{topbanner.title}}</h5>
+                            <a class="textp" ui-sref="tabs.cookbook">{{topbanner.content}}</a>
+                        </div>
+
+                    </div>
+                </ion-slide>
+            </ion-slide-box>
+        </div>
+        <div class="row text-center bgcolorw" >
+            <div class="col col-25">
+                <a ui-sref="tabs.cookmain"><img class="imgsize" src="images/1.png"></a>
+                <p class="font12px">美食视频</p>
+            </div>
+            <div class="col col-25">
+               <a ui-sref="tabs.cookmain"><img class="imgsize" src="images/2.png"></a>
+                <p class="font12px">美食菜单</p>
+            </div>
+            <div class="col col-25">
+                <a ui-sref="tabs.activity"><img class="imgsize" src="images/3.png"></a>
+                <p class="font12px">美食活动</p>
+            </div>
+            <div class="col col-25">
+                <a ui-sref="tabs.cookmain"><img class="imgsize" src="images/4.png"></a>
+                <p class="font12px">最新食谱</p>
+            </div>
+        </div>
+
+        <div class="row" style="background: #fff">
+            <i class="icon ion-social-twitter balanced"></i>
+            <span class="font12px">成都 周围都在看</span>
+        </div>
+        <div class="row text-center bgcolorw">
+            <div class="col col-33">
+                <a ui-sref="tabs.cookbook"><img src="images/home/round_1.jpg"></a>
+                <span class="font12px">珍珠丸子</span>
+            </div>
+            <div class="col col-33">
+                <a ui-sref="tabs.cookbook"><img src="images/home/round_2.jpg"></a>
+                <span class="font12px">红烧肉</span>
+            </div>
+            <div class="col col-33">
+                <a ui-sref="tabs.cookbook"><img src="images/home/round_3.jpg"></a>
+                <span class="font12px">香葱酥饼</span>
+            </div>
+        </div>
+        <div class="row">
+            <span ng-class="addClass(0)"><a  class="taba" on-touch="activeSlide(0)">精　选</a> </span>
+            <span ng-class="addClass(1)"><a  class="taba" on-touch="activeSlide(1)">秀美食</a> </span>
+        </div>
+        <ion-slide-box auto-play="false"  on-slide-changed="slideChanged(index)" active-slide="slideIndex" show-pager="false">
+            <ion-slide>
+                <ion-slide-box auto-play="true"  does-continue="true">
+                    <ion-slide> <a ui-sref="tabs.activitysub"><img src="images/home/huodong1.jpg"></a></ion-slide>
+                    <ion-slide> <a ui-sref="tabs.activitysub"><img src="images/home/huodong2.jpg"></a></ion-slide>
+                    <ion-slide> <a ui-sref="tabs.activitysub"><img src="images/home/huodong3.jpg"></a></ion-slide>
+                    <ion-slide> <a ui-sref="tabs.activitysub"><img src="images/home/huodong4.jpg"></a></ion-slide>
+                </ion-slide-box>
+                <div class="list card" ng-repeat="item in homejx">
+                    <div class="item item-body">
+                        <img class="full-image" ng-src="{{item.imgsrc}}">
+                        <p>{{item.content}}</p>
+                        <p>
+                            <a class="subdued">{{item.like}}喜欢</a>
+                            <a class="subdued">{{item.comment}} 评论</a>
+                            <a class="subdued">{{item.done}} 做过</a>
+                        </p>
+                    </div>
+                    <div class="item tabs tabs-secondary tabs-icon-left">
+                        <a class="tab-item" ng-click="praise($index)">
+                            <i class="icon ion-heart" ng-class="addred($index)"></i> 喜欢
+                        </a>
+                        <a class="tab-item">
+                            <i class="icon ion-chatbox"></i> 评论
+                        </a>
+                        <a class="tab-item">
+                            <i class="icon ion-share"></i> 分享
+                        </a>
+                    </div>
+                </div>
+                <ion-infinite-scroll on-infinite="loadMore()" distance="1%" spinner="spiral">
+                </ion-infinite-scroll>
+            </ion-slide>
+
+            <ion-slide>
+                <div class="list card">
+                    <div class="item">
+                        <p>热门话题</p>
+                    </div>
+                    <div class="item item-body">
+                        <div class="item item-list-detail">
+                            <ion-scroll direction="x">
+                                <ul class="ul">
+                                    <li class="huatiimg">
+                                        <img src="images/home/huati1.jpg" />
+                                        <span class="huatitext">夏日冰饮</span>
+                                    </li>
+                                    <li class="huatiimg">
+                                        <img src="images/home/huati2.jpg" />
+                                        <span class="huatitext">滋补养身</span>
+                                    </li>
+                                    <li class="huatiimg">
+                                        <img src="images/home/huati3.jpg"/>
+                                        <span class="huatitext">西式大餐</span>
+                                    </li>
+                                    <li class="huatiimg">
+                                        <img src="images/home/huati4.jpg"/>
+                                        <span class="huatitext">最爱小龙虾</span>
+                                    </li>
+                                    <li class="huatiimg">
+                                        <img src="images/home/huati5.jpg" />
+                                        <span class="huatitext">美味果茶</span>
+                                    </li>
+                                </ul>
+                            </ion-scroll>
+                        </div>
+                    </div>
+                    <div class="item item-icon-left">
+                        <i class="icon ion-images"></i>
+                        <span>24小时最热</span>
+                        <div></div>
+                    </div>
+
+                </div>
+                <div class="row" style="padding:0">
+                    <div class="col col-20 taba" style="padding:0 10px">全部</div>
+                </div>
+                <div class="list card" ng-repeat="item in xiums">
+                    <div class="item item-avatar">
+                        <img ng-src="{{item.tximg}}">
+                        <h2>{{item.txname}}</h2>
+                        <p>{{item.date}}</p>
+                    </div>
+                    <div class="item item-body">
+                        <img class="full-image" ng-src="{{item.xmsimg}}">
+                        <span class="colororange">{{item.xmstitle}}</span>
+                    </div>
+                    <div class="item">
+                        <a class="icon ion-heart subdued allshare" ></a> <span >赞</span>
+                        <a class="icon ion-share subdued allshare col-offset-10"></a><span>评论</span>
+                    </div>
+
+                </div>
+            </ion-slide>
+
+        </ion-slide-box>
+
+
+    </ion-content>
+</ion-view>

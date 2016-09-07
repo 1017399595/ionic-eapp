@@ -1,0 +1,232 @@
+/****************tour.html css样式******************/
+
+#tour3{position: relative}
+.into{position:absolute;bottom:20%;left:50%;display: block;
+    width:100px;height:40px;line-height:36px;font-size:20px;border: 1px solid #ccc;
+    margin-left:-50px;text-align: center;color:#fff;border-radius: 5px;text-decoration: none;
+}
+.slider-pager .slider-pager-page{color: #f1f1f1  }
+
+
+/****************home.html css样式******************/
+a{text-decoration: none}
+#tabs .ion-ios-chatbubble:before{color:#EF7E00}
+#tabs .ion-ios-home:before{color:#EF7E00}
+#tabs .ion-ios-location:before{color:#EF7E00}
+#tabs .ion-ios-cart:before{color:#EF7E00}
+#tabs .tab-item{color:#EF7E00}
+.topbg{
+    background:linear-gradient(125deg, #1e755f, #145fa0, #b32486, #cd951a);
+    background-size: 800% 800%;
+    -webkit-animation: AnimationName 11s ease infinite;
+    -moz-animation: AnimationName 11s ease infinite;
+    -o-animation: AnimationName 11s ease infinite;
+    animation: AnimationName 11s ease infinite;
+}
+@-webkit-keyframes AnimationName {
+    0%{background-position:97% 0%}
+    50%{background-position:4% 100%}
+    100%{background-position:97% 0%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:97% 0%}
+    50%{background-position:4% 100%}
+    100%{background-position:97% 0%}
+}
+@-o-keyframes AnimationName {
+    0%{background-position:97% 0%}
+    50%{background-position:4% 100%}
+    100%{background-position:97% 0%}
+}
+@keyframes AnimationName {
+    0%{background-position:97% 0%}
+    50%{background-position:4% 100%}
+    100%{background-position:97% 0%}
+}
+.featured-slide {
+    transform: perspective(600px) rotateY(45deg);
+    -webkit-transform: perspective(600px) rotateY(45deg);
+    box-shadow: -4px 2px 12px rgba(0, 0, 0, 0.3);
+    margin-left: 10px;
+    opacity: 1;
+}
+.featured-slide-1 {
+    position: absolute;
+    z-index: 20;
+    left: 6px;
+    top: 18px;
+}
+.featured-slide-2 {
+    position: absolute;
+    z-index: 10;
+    left: -10px;
+    top: 10px;
+}
+.percent100{
+    width:100%;
+}
+.bgorange{background:#EF7E00 !important; }
+.sidemenufont{font-size:16px;font-weight: normal;color:#ef7e00}
+.modalicon{color: #c8c8c8 }
+.naviconposition{position: absolute;right:20px;top:7px}
+.font12px{font-size:12px !important;color: #9c9c9c !important }
+.banner_img img{width:140px;height:140px}
+.span1{position: absolute;left:16px;top:24px;font-size:8px;color:#EF7E00}
+.headerbg{ background: #3da1eb }
+img{width:100%;height:100%}
+.imgsize{width:4em}
+.bgcolorw{background: #fff;margin:10px 0}
+.textp{display:block;color: #7ab7e6;font-size:12px;padding-bottom:20px;}
+.ul{display:inline-block}
+.huatiimg{position: relative;display:inline-block}
+.huatiimg img{width:7em;opacity: 0.8}
+.huatitext{position:absolute;top:0;left:0;color: #fff;font-size:16px;
+    font-family: 微软雅黑;display: block;background:rgba(0,0,0,0.5);width:100%;height: 97%;text-align: center;line-height:7em}
+.current{border-bottom: 1px solid #ef7e00}
+.taba{color: #555555;font-weight: 600}
+.allshare{font-size:20px;color:#555;}
+.colororange{color:#EF7E00;font-size:14px}
+
+#activity .title .title-center .header-item{color:#fff}
+.redclass{color:red}
+
+/*cookbook css*/
+.cookbookbg{background: #f3f2f0 }
+.cookbooktext{color:#ef7e00 !important;}
+.cookbookmargin{margin-top:0 !important;padding-top:5px !important;}
+
+/*chat css*/
+.chaticon{font-size:25px;padding-right:16px;color:#ef7e00}
+.chatimg{position: relative;display:inline-block;margin-right:10px}
+.chatimg img{width:5em}
+.chattext{position:absolute;bottom:0;left:0;color: #fff;font-size:12px;
+display: block;background:rgba(0,0,0,0.5);width:100%;height:30%;text-align: center;}
+
+/*cart css*/
+.cartlistimg{width:4em;}
+.num{background:#ef7e00 ;font-size:12px ;color:#fff;font-family: Arial;font-weight: normal;right:calc(50% - 15px) !important;}
+.carticon{padding-right:16px;color:#ef7e00}
+.spanboder{border:1px #ddd solid;display:inline-block;width:30px;height:30px;text-align: center;line-height: 30px}
+.numpadding{padding-top:30px}
+.total{font-size:16px;font-weight: bold;color:#ef7e00}
+
+
+/*placeorder css*/
+.padding0{padding:0 !important;}
+
+.error {color: red;padding-top:4px;font-size:12px}
+
+
+/*Scale-In Animation*/
+.scale-in {
+    transform: scale(0.8);
+    opacity: 0;
+}
+
+.scale-in.ng-enter,
+.scale-in > .ng-enter {
+    transition: all cubic-bezier(.1, .7, .1, 1) 600ms;
+}
+
+.scale-in.ng-enter-active,
+.scale-in > .ng-enter-active {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.scale-in.ng-leave,
+.scale-in > .ng-leave {
+    transition: all ease-in-out 250ms;
+}
+
+/*箭头*/
+.arror {
+    font-size: 35px;
+    color: #ef7e00;
+    position: absolute;
+    -webkit-animation: bounce 2000ms infinite ease-out;
+    -moz-animation: bounce 2000ms infinite ease-out;
+    -o-animation: bounce 2000ms infinite ease-out;
+    animation: bounce 2000ms infinite ease-out;
+}
+
+/* 帧动画*/
+/* Webkit, Chrome and Safari */
+@-webkit-keyframes bounce {
+    0% {
+        -webkit-transform:translateY(0%);
+        opacity: 0.8;
+    }
+    15% {
+        -webkit-transform:translateY(0%);
+        opacity: 0.8;
+    }
+    85% {
+        -webkit-transform:translateY(-100%);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform:translateY(-100%);
+        opacity: 0;
+    }
+}
+
+/* Mozilla Firefox 15 below */
+@-moz-keyframes bounce {
+    0% {
+        -moz-transform:translateY(0%);
+        opacity: 0.8;
+    }
+    15% {
+        -moz-transform:translateY(0%);
+        opacity: 0.8;
+    }
+    85% {
+        -moz-transform:translateY(-100%);
+        opacity: 0;
+    }
+    100% {
+        -moz-transform:translateY(-100%);
+        opacity: 0;
+    }
+}
+
+/* Opera 12.0 */
+@-o-keyframes bounce {
+    0% {
+        -o-transform:translateY(-0%);
+        opacity: 0.8;
+    }
+    15% {
+        -o-transform:translateY(0%);
+        opacity: 0.8;
+    }
+    100% {
+        -o-transform:translateY(-100%);
+        opacity: 0;
+    }
+    85% {
+        -o-transform:translateY(-100%);
+        opacity: 0;
+    }
+}
+
+/* W3, Opera 12+, Firefox 16+ */
+@keyframes bounce {
+    0% {
+        transform:translateY(0%);
+        opacity: 0.8;
+    }
+    15% {
+        transform:translateY(0%);
+        opacity: 0.8;
+    }
+    85% {
+        transform:translateY(-100%);
+        opacity: 0;
+    }
+    100% {
+        -o-transform:translateY(-100%);
+        opacity: 0;
+    }
+}

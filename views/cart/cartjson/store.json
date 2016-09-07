@@ -1,0 +1,93 @@
+{
+  "categories":[
+      {"category":"烘焙美厨","imgsrc":"images/cart/cart_hpmc.png"},
+      {"category":"休闲食品","imgsrc":"images/cart/cart_xxsp.png"},
+      {"category":"精选生鲜","imgsrc":"images/cart/cart_jxsx.png"}
+  ],
+  "products":[
+      {
+        "name": "宇峰凉粉",
+        "description": "黑白组合4盒",
+        "category": "烘焙美厨",
+        "price": 13.8,
+        "imgsrc": "images/cart/cart_hpmc_1.jpg"
+      },
+      {
+        "name": "无盐黄油",
+        "description": "原装454克 烘培必备",
+        "category": "烘焙美厨",
+        "price": 35.8,
+        "imgsrc": "images/cart/cart_hpmc_2.jpg"
+      },
+      {
+        "name": "菲力奶油芝士",
+        "description": "原装进口250克",
+        "category": "烘焙美厨",
+        "price": 29.8,
+        "imgsrc": "images/cart/cart_hpmc_3.jpg"
+      },
+      {
+        "name": "易小焙冰皮月饼粉",
+        "description": "冰皮月饼粉300克",
+        "category": "烘焙美厨",
+        "price": 13.8,
+        "imgsrc": "images/cart/cart_hpmc_4.jpg"
+      },
+      {
+        "name": "垣曲青皮核桃",
+        "description": "3斤包邮",
+        "category": "休闲食品",
+        "price": 9.9,
+        "imgsrc": "images/cart/cart_xxsp_1.jpg"
+      },
+      {
+        "name": "松桂坊 五花腊肉",
+        "description": "250克/袋",
+        "category": "休闲食品",
+        "price": 26.8,
+        "imgsrc": "images/cart/cart_xxsp_2.jpg"
+      },
+      {
+        "name": "科尔沁 内蒙手撕风干牛肉",
+        "description": "250克/袋",
+        "category": "休闲食品",
+        "price": 59,
+        "imgsrc": "images/cart/cart_xxsp_3.jpg"
+      },
+      {
+        "name": "淘豆 燕麦巧克力",
+        "description": "468克*2袋",
+        "category": "休闲食品",
+        "price": 25.6,
+        "imgsrc": "images/cart/cart_xxsp_4.jpg"
+      },
+      {
+        "name": "阿根廷红虾",
+        "description": "鲜动生活2kg",
+        "category": "精选生鲜",
+        "price": 178,
+        "imgsrc": "images/cart/cart_jxsx_1.jpg"
+      },
+      {
+        "name": "智利进口三文鱼",
+        "description": "鲜动生活600克 原条切片",
+        "category": "精选生鲜",
+        "price": 88,
+        "imgsrc": "images/cart/cart_jxsx_2.jpg"
+      },
+      {
+        "name": "越南进口巴沙鱼柳",
+        "description": "鲜动生活2.2kg",
+        "category": "精选生鲜",
+        "price": 99,
+        "imgsrc": "images/cart/cart_jxsx_3.jpg"
+      },
+      {
+        "name": "加拿大进口北极海参",
+        "description": "鲜动生活550克",
+        "category": "精选生鲜",
+        "price": 128,
+        "imgsrc": "images/cart/cart_jxsx_4.jpg"
+      }
+  ]
+}

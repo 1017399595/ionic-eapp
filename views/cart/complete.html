@@ -1,0 +1,27 @@
+<ion-view title="感谢您的支持" ng-controller="completeCtrl">
+    <ion-content style="background:#e5e5e5">
+        <div class="list" ng-show="data.shipping.errorStatus">
+            <div class="item">
+                <h2>错误 (<span class="redclass">{{data.shipping.errorStatus}}</span>)。您的订单无法处理。</h2>
+                <a ui-sref="tabs.order" class="button button-small" style="background:#ef7e00;color:#fff">
+                    再次尝试
+                </a>
+            </div>
+        </div>
+
+        <div class="list" ng-hide="data.shipping.errorStatus">
+            <div class="item item-text-wrap">
+                <h2>感谢您的购买！</h2>
+                <p>我们将第一时间给您发货。</p>
+                <p>您的订单号为：<span class="cookbooktext">{{data.shipping.orderid}}</span></p>
+            </div>
+        </div>
+        <div class="list">
+            <div class="item" style="border:none;background:#e5e5e5">
+                <button class=" button button-block button-positive"  ui-sref="tabs.home" >
+                    返回首页
+                </button>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

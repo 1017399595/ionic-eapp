@@ -1,0 +1,30 @@
+<ion-view title="确认订单" ng-controller="cartCtrl">
+    <ion-content style="background:#e5e5e5">
+        <form name="shippingForm" novalidate>
+            <div class="list card">
+                <label class="item item-input item-stacked-label">
+                    <span class="input-label colororange">收货人姓名</span>
+                    <span class="error" ng-show="shippingForm.name.$error.required && shippingForm.name.$dirty">收货人姓名</span>
+                    <input type="text"  placeholder="收货人姓名" name="name" ng-model="data.shipping.name" required/>
+                </label>
+                <label class="item item-input item-stacked-label">
+                    <span class="input-label colororange">收货地址</span>
+                    <span class="error" ng-show="shippingForm.address.$error.required && shippingForm.address.$dirty">收货地址</span>
+                    <input type="text"  placeholder="xx省xx市xx县xx街道xx地址" name="address" ng-model="data.shipping.address" required/>
+                </label>
+                <label class="item item-input item-stacked-label">
+                    <span class="input-label colororange">联系电话（重要）</span>
+                    <span class="error" ng-show="shippingForm.tel.$error.required && shippingForm.tel.$dirty">收货地址</span>
+                    <input type="text"  placeholder="139xxxxxxxx" name="tel" ng-model="data.shipping.tel" required/>
+                </label>
+            </div>
+            <div class="list">
+                <div class="item" style="border:none;background:#e5e5e5">
+                    <button class=" button button-block button-positive" ng-disabled="shippingForm.$invalid" ui-sref="tabs.complete" >
+                        确认付款
+                    </button>
+                </div>
+            </div>
+        </form>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,24 @@
+<ion-view title="附近餐厅">
+    <ion-nav-buttons side="right">
+        <i class="icon ion-ios-location-outline chaticon" ></i>
+    </ion-nav-buttons>
+    <ion-content style="background:#e5e5e5">
+        <ion-refresher pulling-text="换一批" pulling-icon="ion-fork" spinner="ripple" on-refresh="refresh()"></ion-refresher>
+        <div class="list card" ng-repeat="item in restaurants">
+            <div class="item item-avatar">
+                <img ng-src="{{item.photos}}">
+                <h2>{{item.name}}</h2>
+                <p>{{item.tags}}</p>
+            </div>
+            <div class="item item-body">
+                <img class="full-image" ng-src="{{item.photos}}">
+                <p>地址：{{item.city}}{{item.area}}{{item.address}}</p>
+                <p>电话：{{item.phone}}</p>
+                <p>特色：{{item.recommended_dishes}}</p>
+            </div>
+
+        </div>
+        <ion-infinite-scroll on-infinite="loadMore()" distance="1%" spinner="spiral">
+        </ion-infinite-scroll>
+    </ion-content>
+</ion-view>

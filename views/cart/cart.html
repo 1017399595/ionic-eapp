@@ -1,0 +1,39 @@
+<ion-view title="购好货" ng-controller="storeListCtrl">
+    <ion-nav-buttons side="right" >
+        <a ui-sref="tabs.checkout">
+        <div class="tab-item has-badge" ng-controller="numCtrl">
+            <i class="icon ion-ios-cart-outline carticon"></i>
+            <i class="badge num">{{totalnum()}}</i>
+        </div>
+        </a>
+    </ion-nav-buttons>
+    <ion-content  style="background:#e5e5e5">
+        <div class="row text-center bgcolorw" >
+            <div class="col col-25" ng-click="selectCategory(null)">
+                <img  class="cartlistimg" src="images/cart/cart_all.png">
+                <p class="font12px " ng-class="acitveClass(null)">所有商品</p>
+            </div>
+            <div class="col col-25" ng-repeat="item in data.categories" ng-click="selectCategory(item.category)">
+                <img class="cartlistimg" ng-src="{{item.imgsrc}}">
+                <p class="font12px" ng-class="acitveClass(item.category)">{{item.category}}</p>
+            </div>
+        </div>
+        <div class="list">
+            <div class="item item-text-wrap" style="padding:0" ng-repeat="product in data.products|filter:showByCategory">
+                <div class="row">
+                    <div class="col col-25"><img ng-src="{{product.imgsrc}}"></div>
+                    <div class="col col-50 ">
+                        <h3>{{product.name}}</h3>
+                        <p class="font12px">{{product.description}}</p>
+                        <h3>{{product.price|currency:"￥"}}</h3>
+                    </div>
+                    <div class="col col-30">
+                        <a class="button button-small" style="background:#ef7e00;color:#fff" ng-click="addCart(product)">
+                            加入购物车
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

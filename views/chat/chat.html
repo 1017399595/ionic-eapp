@@ -1,0 +1,38 @@
+<ion-view title="圈圈" >
+    <ion-nav-buttons side="right">
+        <i class="icon ion-ios-chatbubble-outline chaticon" ></i>
+
+    </ion-nav-buttons>
+    <ion-content style="background:#e5e5e5">
+        <ion-slide-box auto-play="true" does-continue="true" slide-interval="4000">
+            <ion-slide><img src="images/chat/chatbanner1.jpg"></ion-slide>
+            <ion-slide><img src="images/chat/chatbanner2.jpg"></ion-slide>
+        </ion-slide-box>
+        <div class="item">
+
+            <ion-scroll direction="x" scrollbar-x="fasle">
+                <ul class="ul">
+                    <li class="chatimg" ng-repeat="chatsmallimg in chatsmallimgs">
+                        <img  ng-src="{{chatsmallimg.smallimg}}" />
+                        <span class="chattext">{{chatsmallimg.smalltitle}}</span>
+                    </li>
+                </ul>
+            </ion-scroll>
+        </div>
+        <div class="list card" ng-repeat="chatcont in chatconts">
+            <div class="item item-avatar">
+                <img ng-src="{{chatcont.headicon}}">
+                <p style="font-size:14px">{{chatcont.headname}}</p>
+                <p style="font-size:12px">{{chatcont.date}}</p>
+            </div>
+            <div class="item">
+                <p>{{chatcont.title}}</p>
+                <img ng-src="{{chatcont.contentimg}}" style="width:150px">
+                <p class="row">
+                    <span class="col col-70"></span><span class="col col-10 ">来自</span><span class="col col-20 cookbooktext">
+                    {{chatcont.from}}</span>
+                </p>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

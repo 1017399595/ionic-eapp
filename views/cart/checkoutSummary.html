@@ -1,0 +1,58 @@
+<ion-view title="购物车">
+    <ion-nav-buttons side="right" >
+        <div class="tab-item has-badge" ng-controller="numCtrl">
+            <a ui-sref="tabs.checkout"><i class="icon ion-ios-cart-outline carticon"></i></a>
+            <i class="badge num">{{totalnum()}}</i>
+        </div>
+    </ion-nav-buttons>
+    <ion-content style="background:#e5e5e5">
+        <div class="list">
+            <!--判断购物车是否为空-->
+            <div class="item" ng-show="cartdata.length == 0">
+                <span>您的购物车是空的。</span>
+                <a ui-sref="tabs.cart" class="button button-small" style="background:#ef7e00;color:#fff">
+                    继续购物
+                </a>
+            </div>
+
+            <!--购物车商品列表-->
+            <div class="item" style="padding:0" ng-repeat="item in cartdata" ng-hide="cartdata.length == 0">
+                <div class="row">
+                    <div class="col col-25"><img ng-src="{{item.product.imgsrc}}"></div>
+                    <div class="col col-50 ">
+                        <h2>{{item.product.name}}</h2>
+                        <div class="numpadding">
+                            <a class="spanboder" ng-click="reducenum(item.product.name)">-</a>
+                            <span class="spanboder">{{item.num}}</span>
+                            <a class="spanboder" ng-click="addnum(item.product.name)">+</a>
+                            {{number}}
+                        </div >
+
+                    </div>
+                    <div class="col col-30">
+                        <h2 style="font-weight: bold">{{item.product.price*item.num|currency:"￥"}}</h2>
+                        <a class="button button-small" style="background:#ef7e00;color:#fff" ng-click="remove(item.product.name)">
+                            　删　除　
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--商品小计-->
+        <div class="list" ng-hide="cartdata.length == 0">
+            <div class="item text-center">
+                <span class="total" ng-controller="numCtrl">商品小计 (共{{totalnum()}}件)：</span>
+                <span class="total">{{totalMoney()|currency:"￥"}}</span>
+            </div>
+            <div class="item text-center">
+                <a ui-sref="tabs.cart" class="button button-small" style="background:#ef7e00;color:#fff">
+                    继续购物
+                </a>
+                <a ui-sref="tabs.order" class="button button-small" style="background:#ef7e00;color:#fff;margin-left:60px">
+                    提交订单
+                </a>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>
+
