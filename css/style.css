@@ -16,8 +16,6 @@ a{text-decoration: none}
 #tabs .ion-ios-cart:before{color:#EF7E00}
 #tabs .tab-item{color:#EF7E00}
 .topbg{
-    width: 100%;
-    height: 12rem;
     background:linear-gradient(125deg, #1e755f, #145fa0, #b32486, #cd951a);
     background-size: 800% 800%;
     -webkit-animation: AnimationName 11s ease infinite;
